@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo{
+    background-color: white;
+    border: 2px solid rgba(255, 255, 255, 0.842);
+    border-radius: 15px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-right: 40px;
+    /* margin-right: 450px; */
+}
+#navbar ul{
+    display: flex;
+    flex-direction: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#navbar li a{
+    text-decoration: none;
+    /* list-style: none; */
+    color: black;
+}
+#navbar li:hover{
+    color: red;
+}
+
+#introSection {
+    color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: center / cover no-repeat url("/static/img/dance2.png");
+    /* background-color: red; */
+    height: 300px;
+    font-size: 2rem;
+    font-family: "Playwrite AU SA", serif;
+  /* font-optical-sizing: auto; */
+  font-weight: bold;
+  font-style: normal;
+}
+#introSection div{
+    text-shadow: 4px 4px 3px black;
+}
+#missionSection{
+    text-align: center;
+    background-color: rgb(149, 224, 79);
+    height: 250px;
+    font-family: "Playwrite AU SA", serif;
+    font-style: italic;
+    
+}
+.card{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 200px;
+    width: 330px;
+    margin-right: 20px;
+    background-color: rgb(148, 202, 148);
+}
+.card-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-img{
+    height: 150px;
+    padding: 0 14px;
+    margin: 5px 9px;
+}
+.card-img img{
+    height: inherit;
+}
+.card-content{
+    padding: o 10px;
+}
+.card-content p{
+    font-size: small;
+}
+#sponsorSection{
+    text-align: center;
+    background-color: rgb(170, 170, 201);
+    height: 200px;
+}
+#sponsors{
+    height: 150px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 15px;
+}
+.spImage{
+    height: 80%;
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    height: 60px;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+

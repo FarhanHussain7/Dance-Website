@@ -1,0 +1,70 @@
+doctype html
+html 
+    head 
+        title Farhan Dance Academy 
+        style 
+            include ../static/style.css 
+    body 
+        //- h1  My site 
+        //- p  Welcome  to my super lame site 
+
+        nav#navbar.top 
+            ul 
+                div#logo 
+                    img(src="/static/img/logo.png")
+                    | FDA
+                li #[a(href="/")  Home] 
+                li #[a(href="/")  About]  
+                li #[a(href="/")  Services] 
+                li #[a(href="/")  Help]  
+                li #[a(href="/")  Contact] 
+
+    section#introSection 
+        div  Welcome to best Dance academy in Delhi
+        div.small  Eat Sleep and Repeat
+
+    section#missionSection 
+        h2   our mission     
+        div.card 
+            h3  Dance Perfection 
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/danceLogo01.png", alt="")
+                div.card-content 
+                    p this is card content images caption 
+
+                    
+        div.card 
+            h3  Dance the way you do 
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/danceLogo02.png", alt="")
+                div.card-content 
+                    p this is card content images caption 
+
+        div.card 
+            h3  Expert Traning 
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/danceLogo03.png", alt="")
+                div.card-content 
+                    p this is card content images caption 
+
+
+    section#sponsorSection 
+        h3 our sponsor 
+        div#sponsors 
+            img(src="/static/img/sponsorImage03.png", alt="sponsor Image", class="spImage")
+            img(src="/static/img/sponsorImage02.png", alt="sponsor Image", class="spImage")
+            img(src="/static/img/sponsorImage04.png", alt="sponsor Image", class="spImage")
+            img(src="/static/img/sponsorImage05.png", alt="sponsor Image", class="spImage")
+
+    footer#footer 
+        |  Copyrigth 2024 FarhanDanceAcademy.com | All rights Reserved        
+
+        script 
+            include ../static/index.js 
+
+
+
+
