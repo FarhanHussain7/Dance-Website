@@ -1,18 +1,22 @@
 // steps- 1 create a package.json by (npm init)
 // step - 2 Create a package-lock.json 
-// step -   Check depandancy and install all the dependancy
-// step - 
-
-
-
-
+// step - 3 Check depandancy and install all the dependancy
+// step - 4 Create a server.js file and write the code for the server
+// step - 5 Create a views folder and create a pug file for the home page
+// step - 6 Create a static folder and add css files
+// step - 7 Create a contact page and add it to the views folder
+// step - 8 Add a form to the contact page and add it to the static folder
+// step - 9 Add a post request to the contact page and save data to mongodb
+// step - 10 Add a get request to the contact page and display data from mongodb
 
 
 
 const express = require("express");
 const path = require('path');
 const app = express();
-const port = 8000;
+require('dotenv').config(); // Load environment variables
+const port = process.env.PORT || 8000;
+const Mongodb = process.env.MONGO_URL || "mongodb+srv://fh4456200_db_user:y7O1u1Fhsau44TFy@cluster0.cmwywmq.mongodb.net/DanceWeb";
 // Constant Variable Giving to Mongodb 
 const mongoose = require('mongoose');
 // Body Parser is requried to fetch data from contact page 
@@ -20,9 +24,13 @@ const bodyparser = require('body-parser');
 
 
 // connecting Mongodb to out database
-mongoose.connect('mongodb://127.0.0.1/contactDance', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+mongoose.connect(Mongodb)
+.then(() => {
+  console.log("MongoDB connected successfully");
+})
+.catch((err) => {
+  console.error("MongoDB connection error:", err);
+  process.exit(1);
 })
 
 // Inerting Query and there Attributes
@@ -38,7 +46,8 @@ var contact = mongoose.model('contact', contactSchema);
 
 
 app.use('/static', express.static('static'));
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
 //PUG SPECIFIC SETUP
 app.set('view engine', 'pug')// set complete engine at the pug
@@ -60,9 +69,10 @@ app.get('/contact',(req, res)=>{
 app.post('/contact',(req, res)=>{
   var Mydata = new contact(req.body);
   Mydata.save().then(( )=>{
-      res.send("this item has been saved to the database")
-  }).catch(()=>{
-    res.send(400).send("Item was not saved to the database")
+      res.status(200).send("this item has been saved to the database")
+  }).catch((err)=>{
+    console.error("Save error:", err);
+    res.status(400).send("Item was not saved to the database")
   });
   // res.status(200).render('contact.pug');
 })
