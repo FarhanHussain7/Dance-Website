@@ -3,52 +3,122 @@ extends base.pug
 block scripts 
     script (src='/static/index.js')
 
-
 block style 
     style 
         include ../static/style.css   
 
-
 block content 
 
     section#introSection 
-        div  Welcome to best Dance academy in Delhi
-        div.small  Eat Sleep and Repeat
+        div  Welcome to Farhan Dance Academy
+        div.small  Where Movement Meets Innovation
+        a.cta-button(href="/contact") Join Us Today
 
     section#missionSection 
-        h2   our mission     
-        div.card 
-            h3  Dance Perfection 
-            div.card-box 
-                div.card-img 
-                    img(src="./static/img/danceLogo01.png", alt="")
-                div.card-content 
-                    p this is card content images caption 
+        h2.section-title Our Mission     
+        .cards-container
+            div.card 
+                h3  Dance Perfection 
+                div.card-box 
+                    div.card-img 
+                        img(src="/static/img/danceLogo01.png", alt="Dance Perfection")
+                    div.card-content 
+                        p Master the art of dance with our expert-led training programs designed for all skill levels.
 
-                    
-        div.card 
-            h3  Dance the way you do 
-            div.card-box 
-                div.card-img 
-                    img(src="/static/img/danceLogo02.png", alt="")
-                div.card-content 
-                    p this is card content images caption 
+            div.card 
+                h3  Dance Your Way 
+                div.card-box 
+                    div.card-img 
+                        img(src="/static/img/danceLogo02.png", alt="Dance Your Way")
+                    div.card-content 
+                        p Express yourself freely through various dance styles and find your unique rhythm.
 
-        div.card 
-            h3  Expert Traning 
-            div.card-box 
-                div.card-img 
-                    img(src="/static/img/danceLogo03.png", alt="")
-                div.card-content 
-                    p this is card content images caption 
+            div.card 
+                h3  Expert Training 
+                div.card-box 
+                    div.card-img 
+                        img(src="/static/img/danceLogo03.png", alt="Expert Training")
+                    div.card-content 
+                        p Learn from industry professionals with years of experience in dance education.
 
+    section#classesSection
+        h2.section-title Our Classes
+        .classes-grid
+            .class-card
+                .class-icon 💃
+                h3 Hip Hop
+                p High-energy urban dance with modern beats and explosive movements.
+            .class-card
+                .class-icon 🩰
+                h3 Ballet
+                p Classical dance technique focusing on grace, precision, and elegance.
+            .class-card
+                .class-icon 🎭
+                h3 Contemporary
+                p Expressive dance combining elements from various styles and genres.
+            .class-card
+                .class-icon 🌟
+                h3 Jazz
+                p Dynamic dance style with syncopated rhythms and theatrical movements.
+            .class-card
+                .class-icon 🔥
+                h3 Salsa
+                p Passionate Latin dance with vibrant music and intimate partner work.
+            .class-card
+                .class-icon 🎪
+                h3 Bollywood
+                p Colorful and energetic Indian dance with storytelling elements.
+
+    section#testimonialsSection
+        h2.section-title What Our Students Say
+        .testimonials-container
+            .testimonial-card
+                .testimonial-text
+                    | "Farhan Dance Academy transformed my dancing skills completely. The instructors are amazing and the environment is so supportive!"
+                .testimonial-author - Sarah K.
+            .testimonial-card
+                .testimonial-text
+                    | "I never thought I could dance, but here I am performing on stage! Thank you for believing in me and pushing me to be better."
+                .testimonial-author - Mike R.
+            .testimonial-card
+                .testimonial-text
+                    | "The best dance academy in Delhi! Professional training, great facilities, and wonderful community. Highly recommend!"
+                .testimonial-author - Priya S.
+
+    section#gallerySection
+        h2.section-title Gallery
+        .gallery-grid
+            .gallery-item
+                img(src="/static/img/stagePerfromance.png", alt="Professional Stage Performance")
+                .gallery-overlay
+                    .gallery-caption Annual Dance Showcase
+            .gallery-item
+                img(src="/static/img/hiphop.png", alt="Hip Hop Dance Class")
+                .gallery-overlay
+                    .gallery-caption Hip Hop Workshop
+            .gallery-item
+                img(src="/static/img/groupDance.png", alt="Group Dance Formation")
+                .gallery-overlay
+                    .gallery-caption Student Performance
+            .gallery-item
+                img(src="/static/img/danceStudio.png", alt="Dance Studio Interior")
+                .gallery-overlay
+                    .gallery-caption Our Dance Studio
+            .gallery-item
+                img(src="/static/img/competion.png", alt="Dance Competition Stage")
+                .gallery-overlay
+                    .gallery-caption Dance Competition
+            .gallery-item
+                img(src="/static/img/TeamPractise.png", alt="Team Dance Practice")
+                .gallery-overlay
+                    .gallery-caption Team Performance
 
     section#sponsorSection 
-        h3 our sponsor 
+        h3.section-title Our Partners
         div#sponsors 
             img(src="/static/img/sponsorImage03.png", alt="sponsor Image", class="spImage")
             img(src="/static/img/sponsorImage02.png", alt="sponsor Image", class="spImage")
             img(src="/static/img/sponsorImage04.png", alt="sponsor Image", class="spImage")
-            img(src="", alt="sponsor Image", class="spImage")
+            img(src="/static/img/sponsorImage01.png", alt="sponsor Image", class="spImage")
 
 

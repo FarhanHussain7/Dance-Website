@@ -1,0 +1,117 @@
+extends base.pug
+
+block style 
+    style 
+        include ../static/style.css   
+
+block content 
+    section#introSection 
+        div  Our Services
+        div.small  Comprehensive Dance Solutions for Everyone
+
+    section#servicesContent
+        .container
+            .services-grid
+                .service-card
+                    .service-icon 🎓
+                    h3 Regular Classes
+                    p Weekly dance classes for all age groups and skill levels.
+                    ul.features
+                        li Flexible timing options
+                        li Small batch sizes
+                        li Personalized attention
+                        li Monthly assessments
+                    a.cta-button(href="/classes") Explore Classes
+
+                .service-card
+                    .service-icon 🎭
+                    h3 Workshop Programs
+                    p Intensive workshops focusing on specific dance styles and techniques.
+                    ul.features
+                        li Weekend workshops
+                        li Guest instructors
+                        li Certificate programs
+                        li Performance opportunities
+                    a.cta-button(href="/contact") Book Workshop
+
+                .service-card
+                    .service-icon 💍
+                    h3 Wedding Choreography
+                    p Customized dance choreography for your special day.
+                    ul.features
+                        li Couple dances
+                        li Family performances
+                        li Sangeet choreography
+                        li Rehearsal sessions
+                    a.cta-button(href="/contact") Get Quote
+
+                .service-card
+                    .service-icon 🏢
+                    h3 Corporate Events
+                    p Dance programs for team building and corporate events.
+                    ul.features
+                        li Team building workshops
+                        li Annual show choreography
+                        li Wellness programs
+                        li Custom packages
+                    a.cta-button(href="/contact") Corporate Inquiry
+
+                .service-card
+                    .service-icon 🎬
+                    h3 Performance Training
+                    p Specialized training for stage performances and competitions.
+                    ul.features
+                        li Competition preparation
+                        li Stage presence training
+                        li Costume guidance
+                        li Music selection
+                    a.cta-button(href="/contact") Performance Training
+
+                .service-card
+                    .service-icon 📹
+                    h3 Online Classes
+                    p Live and recorded dance sessions for remote learning.
+                    ul.features
+                        li Live interactive sessions
+                        li Recorded tutorials
+                        li Personal feedback
+                        li Flexible schedule
+                    a.cta-button(href="/contact") Start Online
+
+    section#processSection
+        h2.section-title How It Works
+        .process-container
+            .process-step
+                .step-number 1
+                h3 Consultation
+                p Discuss your goals and requirements with our experts.
+            .process-step
+                .step-number 2
+                h3 Customization
+                p We create a personalized program tailored to your needs.
+            .process-step
+                .step-number 3
+                h3 Training
+                p Begin your dance journey with our expert instructors.
+            .process-step
+                .step-number 4
+                h3 Performance
+                p Showcase your skills at our events and performances.
+
+    section#testimonialsSection
+        h2.section-title Client Success Stories
+        .testimonials-container
+            .testimonial-card
+                .testimonial-text
+                    | "The wedding choreography service was exceptional! They made our sangeet night unforgettable with amazing dance performances."
+                .testimonial-author - Anjali & Rohit
+            .testimonial-card
+                .testimonial-text
+                    | "Our corporate team building workshop was a huge success. The dance activities brought everyone together and boosted morale."
+                .testimonial-author - TechCorp India
+            .testimonial-card
+                .testimonial-text
+                    | "The online classes have been a game-changer. I can learn from home and still get personalized attention from instructors."
+                .testimonial-author - Maria K.
+
+    a.cta-button(href="/contact" style="margin: 2rem auto; display: table;") Get Started Today

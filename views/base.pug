@@ -1,25 +1,45 @@
 doctype html
 html
   head
-    title Farhan Dance Academy
+    title Farhan Dance Academy - Where Movement Meets Innovation
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css")
     block scripts
     block style 
       
   body
-     nav#navbar.top 
+    .particles
+      .particle(style="left: 10%; animation-delay: 0s;")
+      .particle(style="left: 20%; animation-delay: 2s;")
+      .particle(style="left: 30%; animation-delay: 4s;")
+      .particle(style="left: 40%; animation-delay: 6s;")
+      .particle(style="left: 50%; animation-delay: 8s;")
+      .particle(style="left: 60%; animation-delay: 10s;")
+      .particle(style="left: 70%; animation-delay: 12s;")
+      .particle(style="left: 80%; animation-delay: 14s;")
+      .particle(style="left: 90%; animation-delay: 16s;")
+    
+    nav#navbar.top 
             ul 
                 div#logo 
                     img(src="/static/img/logo.png")
                     | FDA
-                li #[a(href="/")  Home] 
-                li #[a(href="/")  About]  
-                li #[a(href="/")  Services] 
-                li #[a(href="/")  Help]  
-                li #[a(href="/contact")  Contact] 
-
+                .nav-links
+                    li #[a(href="/")  Home] 
+                    li #[a(href="/about")  About]  
+                    li #[a(href="/services")  Services] 
+                    li #[a(href="/classes")  Classes] 
+                    li #[a(href="/gallery")  Gallery] 
+                    li #[a(href="/contact")  Contact] 
 
 block content
 
 footer#footer 
-    |  Copyrigth 2024 FarhanDanceAcademy.com | All rights Reserved        
-    
+    .footer-content
+        p  2024 Farhan Dance Academy | All rights Reserved
+        .social-links
+            a(href="#" title="Facebook") <i class="fab fa-facebook-f"></i>
+            a(href="#" title="Instagram") <i class="fab fa-instagram"></i>
+            a(href="#" title="Twitter") <i class="fab fa-twitter"></i>
+            a(href="#" title="YouTube") <i class="fab fa-youtube"></i>

@@ -1,0 +1,93 @@
+extends base.pug
+
+block style 
+    style 
+        include ../static/style.css   
+
+block content 
+    section#introSection 
+        div  About Farhan Dance Academy
+        div.small  Our Story, Our Passion, Our Mission
+
+    section#aboutContent
+        .container
+            .about-grid
+                .about-text
+                    h2.section-title Our Journey
+                    p Founded in 2010, Farhan Dance Academy has been at the forefront of dance education in Delhi. We believe that dance is not just an art form, but a way of life that transforms individuals and communities.
+                    
+                    h3 Our Vision
+                    p To be the leading dance academy that nurtures talent, fosters creativity, and inspires the next generation of dancers to reach their full potential.
+                    
+                    h3 Our Values
+                    ul.values-list
+                        li <strong>Excellence:</strong> We strive for the highest standards in dance education
+                        li <strong>Inclusivity:</strong> Everyone is welcome regardless of age, skill level, or background
+                        li <strong>Innovation:</strong> We blend traditional techniques with contemporary styles
+                        li <strong>Community:</strong> We build lasting relationships through the power of dance
+
+                .about-image
+                    img(src="/static/img/about-studio.jpg", alt="Our Dance Studio")
+
+    section#teamSection
+        h2.section-title Meet Our Team
+        .team-grid
+            .team-card
+                .team-img
+                    img(src="/static/img/team/farhan.jpg", alt="Farhan Hussain")
+                .team-info
+                    h3 Farhan Hussain
+                    p.title Founder & Director
+                    p.description With over 15 years of experience in dance education and choreography.
+            .team-card
+                .team-img
+                    img(src="/static/img/team/instructor1.jpg", alt="Sarah Johnson")
+                .team-info
+                    h3 Sarah Johnson
+                    p.title Hip Hop Instructor
+                    p.description National hip-hop champion with 8 years of teaching experience.
+            .team-card
+                .team-img
+                    img(src="/static/img/team/instructor2.jpg", alt="Priya Sharma")
+                .team-info
+                    h3 Priya Sharma
+                    p.title Classical Dance Expert
+                    p.description Masters in classical dance with expertise in Bharatanatyam and Kathak.
+
+    section#facilitiesSection
+        h2.section-title Our Facilities
+        .facilities-grid
+            .facility-card
+                .facility-icon 🏢
+                h3 Spacious Studios
+                p State-of-the-art dance studios with professional flooring and mirrors.
+            .facility-card
+                .facility-icon 🎵
+                h3 Sound Systems
+                p Professional audio equipment for the best dance experience.
+            .facility-card
+                .facility-icon 🚿
+                h3 Changing Rooms
+                p Clean and comfortable changing facilities with showers.
+            .facility-card
+                .facility-icon 🅿️
+                h3 Parking
+                p Ample parking space for students and visitors.
+
+    section#achievementsSection
+        h2.section-title Our Achievements
+        .achievements-container
+            .achievement-item
+                .number 500+
+                .label Students Trained
+            .achievement-item
+                .number 50+
+                .label Awards Won
+            .achievement-item
+                .number 15
+                .label Years of Excellence
+            .achievement-item
+                .number 100+
+                .label Performances
+
+    a.cta-button(href="/contact" style="margin: 2rem auto; display: table;") Join Our Dance Family

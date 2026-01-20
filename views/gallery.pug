@@ -1,0 +1,174 @@
+extends base.pug
+
+block style 
+    style 
+        include ../static/style.css   
+
+block content 
+    section#introSection 
+        div  Gallery
+        div.small  Capturing Moments of Dance Excellence
+
+    section#galleryFilters
+        .filter-container
+            button.filter-btn.active(data-filter="all") All
+            button.filter-btn(data-filter="performances") Performances
+            button.filter-btn(data-filter="classes") Classes
+            button.filter-btn(data-filter="events") Events
+            button.filter-btn(data-filter="students") Students
+
+    section#galleryGrid
+        .gallery-grid
+            .gallery-item(data-category="performances")
+                img(src="/static/img/stagePerfromance.png", alt="Professional Dance Stage Performance")
+                .gallery-overlay
+                    .gallery-caption Annual Dance Showcase 2024
+                    .gallery-date March 15, 2024
+
+            .gallery-item(data-category="classes")
+                img(src="/static/img/hiphop.png", alt="Hip Hop Dance Training Class")
+                .gallery-overlay
+                    .gallery-caption Hip Hop Masterclass
+                    .gallery-date Weekly Session
+
+            .gallery-item(data-category="events")
+                img(src="/static/img/dance2.png", alt="Dance Workshop Group Session")
+                .gallery-overlay
+                    .gallery-caption Summer Dance Workshop
+                    .gallery-date June 2024
+
+            .gallery-item(data-category="students")
+                img(src="/static/img/groupDance.png", alt="Dance Students Group Practice")
+                .gallery-overlay
+                    .gallery-caption Student Achievement
+                    .gallery-date May 2024
+
+            .gallery-item(data-category="performances")
+                img(src="/static/img/competion.png", alt="Dance Competition Performance")
+                .gallery-overlay
+                    .gallery-caption National Dance Competition
+                    .gallery-date April 2024
+
+            .gallery-item(data-category="classes")
+                img(src="/static/img/dance1.jpeg", alt="Ballet Dance Class Practice")
+                .gallery-overlay
+                    .gallery-caption Ballet Training Session
+                    .gallery-date Regular Class
+
+            .gallery-item(data-category="events")
+                img(src="/static/img/dance.jpeg", alt="Cultural Dance Festival Event")
+                .gallery-overlay
+                    .gallery-caption Cultural Dance Festival
+                    .gallery-date February 2024
+
+            .gallery-item(data-category="students")
+                img(src="/static/img/TeamPractise.png", alt="Kids Dance Class Students")
+                .gallery-overlay
+                    .gallery-caption Advanced Students Group
+                    .gallery-date March 2024
+
+            .gallery-item(data-category="performances")
+                img(src="/static/img/stagePerfromance.png", alt="Contemporary Dance Stage Show")
+                .gallery-overlay
+                    .gallery-caption Stage Performance
+                    .gallery-date January 2024
+
+            .gallery-item(data-category="classes")
+                img(src="/static/img/hiphop.png", alt="Contemporary Dance Practice Session")
+                .gallery-overlay
+                    .gallery-caption Contemporary Dance
+                    .gallery-date Weekly Session
+
+            .gallery-item(data-category="events")
+                img(src="/static/img/dance2.png", alt="Professional Dance Workshop")
+                .gallery-overlay
+                    .gallery-caption Guest Instructor Workshop
+                    .gallery-date December 2023
+
+            .gallery-item(data-category="students")
+                img(src="/static/img/groupDance.png", alt="Dance Students Training")
+                .gallery-overlay
+                    .gallery-caption Kids Dance Class
+                    .gallery-date Regular Session
+
+    section#videoGallery
+        h2.section-title Video Gallery
+        .video-grid
+            .video-item
+                .video-thumbnail
+                    img(src="/static/img/stagePerfromance.png", alt="Hip Hop Dance Performance")
+                    .play-button ▶
+                .video-info
+                    h3 Annual Showcase 2024
+                    p Duration: 5:30
+                    a.cta-button(href="#" target="_blank") Watch Video
+
+            .video-item
+                .video-thumbnail
+                    img(src="/static/img/hiphop.png", alt="Hip Hop Training Session")
+                    .play-button ▶
+                .video-info
+                    h3 Hip Hop Training Session
+                    p Duration: 3:45
+                    a.cta-button(href="#" target="_blank") Watch Video
+
+            .video-item
+                .video-thumbnail
+                    img(src="/static/img/groupDance.png", alt="Student Dance Solo")
+                    .play-button ▶
+                .video-info
+                    h3 Student Solo Performance
+                    p Duration: 4:20
+                    a.cta-button(href="#" target="_blank") Watch Video
+
+            .video-item
+                .video-thumbnail
+                    img(src="/static/img/competion.png", alt="Dance Battle Competition")
+                    .play-button ▶
+                .video-info
+                    h3 Dance Competition Highlights
+                    p Duration: 6:15
+                    a.cta-button(href="#" target="_blank") Watch Video
+
+    section#testimonialsSection
+        h2.section-title Student Success Stories
+        .testimonials-container
+            .testimonial-card
+                .testimonial-text
+                    | "Being part of the gallery performances has boosted my confidence tremendously. The academy provides amazing opportunities to showcase our talent!"
+                .testimonial-author - Rahul M.
+                .testimonial-role Hip Hop Student
+
+            .testimonial-card
+                .testimonial-text
+                    | "The annual showcase was a life-changing experience. The training, costumes, and stage production were absolutely professional!"
+                .testimonial-author - Ananya K.
+                .testimonial-role Ballet Student
+
+            .testimonial-card
+                .testimonial-text
+                    | "I've grown so much as a dancer thanks to the performance opportunities. The gallery captures our journey perfectly!"
+                .testimonial-author - Karan S.
+                .testimonial-role Contemporary Student
+
+    section#socialSection
+        h2.section-title Follow Us on Social Media
+        .social-gallery
+            .social-item
+                img(src="/static/img/hiphop.png", alt="Hip Hop Dance Instagram")
+                .social-overlay
+                    a(href="#" target="_blank") <i class="fab fa-instagram"></i> View on Instagram
+            .social-item
+                img(src="/static/img/dance1.jpeg", alt="Contemporary Dance Instagram")
+                .social-overlay
+                    a(href="#" target="_blank") <i class="fab fa-instagram"></i> View on Instagram
+            .social-item
+                img(src="/static/img/groupDance.png", alt="Group Dance Instagram")
+                .social-overlay
+                    a(href="#" target="_blank") <i class="fab fa-instagram"></i> View on Instagram
+            .social-item
+                img(src="/static/img/danceStudio.png", alt="Ballet Dance Instagram")
+                .social-overlay
+                    a(href="#" target="_blank") <i class="fab fa-instagram"></i> View on Instagram
+
+    a.cta-button(href="/contact" style="margin: 2rem auto; display: table;") Join Our Next Performance

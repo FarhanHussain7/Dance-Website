@@ -1,0 +1,216 @@
+extends base.pug
+
+block style 
+    style 
+        include ../static/style.css   
+
+block content 
+    section#introSection 
+        div  Dance Classes
+        div.small  Find Your Perfect Dance Style
+
+    section#classSchedule
+        h2.section-title Class Schedule
+        .schedule-container
+            .schedule-tabs
+                button.tab-btn.active(data-tab="beginner") Beginner
+                button.tab-btn(data-tab="intermediate") Intermediate
+                button.tab-btn(data-tab="advanced") Advanced
+                button.tab-btn(data-tab="kids") Kids
+
+            .schedule-content
+                .tab-content.active#beginner
+                    .class-schedule
+                        .schedule-item
+                            .time 9:00 AM - 10:00 AM
+                            .class-info
+                                h4 Hip Hop Basics
+                                p.instructor Farhan Hussain
+                                p.level Beginner Level
+                        .schedule-item
+                            .time 10:30 AM - 11:30 AM
+                            .class-info
+                                h4 Ballet Fundamentals
+                                p.instructor Priya Sharma
+                                p.level Beginner Level
+                        .schedule-item
+                            .time 4:00 PM - 5:00 PM
+                            .class-info
+                                h4 Contemporary Introduction
+                                p.instructor Sarah Johnson
+                                p.level Beginner Level
+
+                .tab-content#intermediate
+                    .class-schedule
+                        .schedule-item
+                            .time 11:00 AM - 12:30 PM
+                            .class-info
+                                h4 Hip Hop Techniques
+                                p.instructor Farhan Hussain
+                                p.level Intermediate Level
+                        .schedule-item
+                            .time 2:00 PM - 3:30 PM
+                                h4 Jazz Fusion
+                                p.instructor Sarah Johnson
+                                p.level Intermediate Level
+
+                .tab-content#advanced
+                    .class-schedule
+                        .schedule-item
+                            .time 6:00 PM - 8:00 PM
+                            .class-info
+                                h4 Advanced Hip Hop
+                                p.instructor Farhan Hussain
+                                p.level Advanced Level
+                        .schedule-item
+                            .time 5:00 PM - 7:00 PM
+                            .class-info
+                                h4 Professional Ballet
+                                p.instructor Priya Sharma
+                                p.level Advanced Level
+
+                .tab-content#kids
+                    .class-schedule
+                        .schedule-item
+                            .time 3:00 PM - 4:00 PM
+                            .class-info
+                                h4 Kids Hip Hop (5-8 years)
+                                p.instructor Sarah Johnson
+                                p.level Kids Level
+                        .schedule-item
+                            .time 4:30 PM - 5:30 PM
+                            .class-info
+                                h4 Kids Ballet (5-10 years)
+                                p.instructor Priya Sharma
+                                p.level Kids Level
+
+    section#classDetails
+        h2.section-title Our Dance Programs
+        .classes-grid
+            .class-card
+                .class-icon 💃
+                h3 Hip Hop
+                .class-details
+                    p.duration 12 weeks program
+                    p.level All Levels
+                    p.schedule Mon, Wed, Fri
+                    p.price ₹6,000/month
+                ul.class-features
+                    li Popping and locking
+                    li Breakdance basics
+                    li Choreography techniques
+                    li Freestyle development
+                a.cta-button(href="/contact") Enroll Now
+
+            .class-card
+                .class-icon 🩰
+                h3 Ballet
+                .class-details
+                    p.duration 12 weeks program
+                    p.level All Levels
+                    p.schedule Tue, Thu, Sat
+                    p.price ₹7,000/month
+                ul.class-features
+                    li Classical techniques
+                    li Barre exercises
+                    li Center work
+                    li Pointe training (advanced)
+                a.cta-button(href="/contact") Enroll Now
+
+            .class-card
+                .class-icon 🎭
+                h3 Contemporary
+                .class-details
+                    p.duration 8 weeks program
+                    p.level Intermediate+
+                    p.schedule Mon, Thu
+                    p.price ₹5,500/month
+                ul.class-features
+                    li Modern dance techniques
+                    li Improvisation
+                    li Floor work
+                    li Emotional expression
+                a.cta-button(href="/contact") Enroll Now
+
+            .class-card
+                .class-icon 🌟
+                h3 Jazz
+                .class-details
+                    p.duration 10 weeks program
+                    p.level All Levels
+                    p.schedule Wed, Fri
+                    p.price ₹5,000/month
+                ul.class-features
+                    li Jazz techniques
+                    li Broadway styles
+                    Lyrical jazz
+                    li Performance skills
+                a.cta-button(href="/contact") Enroll Now
+
+            .class-card
+                .class-icon 🔥
+                h3 Salsa
+                .class-details
+                    p.duration 6 weeks program
+                    p.level Beginner/Intermediate
+                    p.schedule Sat, Sun
+                    p.price ₹4,000/month
+                ul.class-features
+                    li Basic steps
+                    li Partner work
+                    li Musicality
+                    li Social dancing
+                a.cta-button(href="/contact") Enroll Now
+
+            .class-card
+                .class-icon 🎪
+                h3 Bollywood
+                .class-details
+                    p.duration 8 weeks program
+                    p.level All Levels
+                    p.schedule Tue, Fri
+                    p.price ₹4,500/month
+                ul.class-features
+                    li Bollywood styles
+                    li Folk dance fusion
+                    li Movie choreography
+                    li Group formations
+                a.cta-button(href="/contact") Enroll Now
+
+    section#pricingSection
+        h2.section-title Membership Plans
+        .pricing-grid
+            .pricing-card
+                h3 Basic
+                .price ₹3,000<span>/month</span>
+                ul.features
+                    li 2 classes per week
+                    li Single dance style
+                    li Group sessions
+                    li Certificate of completion
+                a.cta-button(href="/contact") Choose Basic
+
+            .pricing-card.featured
+                h3 Popular
+                .price ₹5,000<span>/month</span>
+                ul.features
+                    li 4 classes per week
+                    li Multiple dance styles
+                    li Group + 1 personal session
+                    li Performance opportunities
+                    li Workshop access
+                a.cta-button(href="/contact") Choose Popular
+
+            .pricing-card
+                h3 Premium
+                .price ₹8,000<span>/month</span>
+                ul.features
+                    li Unlimited classes
+                    li All dance styles
+                    li Personal training sessions
+                    li Competition preparation
+                    li Costume and makeup
+                    li Video portfolio
+                a.cta-button(href="/contact") Choose Premium
+
+    a.cta-button(href="/contact" style="margin: 2rem auto; display: table;") Start Your Dance Journey

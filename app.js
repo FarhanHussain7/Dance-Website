@@ -56,13 +56,38 @@ app.set('views', path.join(__dirname, 'views'))// set the view directory
 
 //endpoints
 app.get('/',(req, res)=>{
-    const con="this is the best content on the internet so far to use it wisely"
-    const param= {'title': 'Pubg is the best game', 'content': con}
+    const con="Welcome to Farhan Dance Academy - Where Movement Meets Innovation"
+    const param= {'title': 'Farhan Dance Academy', 'content': con}
     res.status(200).render('./home.pug', param);
 })
+
+// About page get request
+app.get('/about',(req, res)=>{
+  const param= {'title': 'About Us - Farhan Dance Academy'}
+  res.status(200).render('about.pug', param);
+})
+
+// Services page get request
+app.get('/services',(req, res)=>{
+  const param= {'title': 'Services - Farhan Dance Academy'}
+  res.status(200).render('services.pug', param);
+})
+
+// Classes page get request
+app.get('/classes',(req, res)=>{
+  const param= {'title': 'Classes - Farhan Dance Academy'}
+  res.status(200).render('classes.pug', param);
+})
+
+// Gallery page get request
+app.get('/gallery',(req, res)=>{
+  const param= {'title': 'Gallery - Farhan Dance Academy'}
+  res.status(200).render('gallery.pug', param);
+})
+
 // Contact page get request
 app.get('/contact',(req, res)=>{
-  const param= { }
+  const param= {'title': 'Contact - Farhan Dance Academy'}
   res.status(200).render('contact.pug', param);
 })
 // Contact post request and saving data from contact to the collection
