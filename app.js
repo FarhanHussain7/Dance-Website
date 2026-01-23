@@ -56,38 +56,38 @@ app.set('views', path.join(__dirname, 'views'))// set the view directory
 
 //endpoints
 app.get('/',(req, res)=>{
-    const con="Welcome to Farhan Dance Academy - Where Movement Meets Innovation"
-    const param= {'title': 'Farhan Dance Academy', 'content': con}
+    const con="Welcome to Rhythm & Motion Dance Academy - Where Movement Meets Innovation"
+    const param= {'title': 'Rhythm & Motion Dance Academy', 'content': con}
     res.status(200).render('./home.pug', param);
 })
 
 // About page get request
 app.get('/about',(req, res)=>{
-  const param= {'title': 'About Us - Farhan Dance Academy'}
+  const param= {'title': 'About Us - Rhythm & Motion Dance Academy'}
   res.status(200).render('about.pug', param);
 })
 
 // Services page get request
 app.get('/services',(req, res)=>{
-  const param= {'title': 'Services - Farhan Dance Academy'}
+  const param= {'title': 'Services - Rhythm & Motion Dance Academy'}
   res.status(200).render('services.pug', param);
 })
 
 // Classes page get request
 app.get('/classes',(req, res)=>{
-  const param= {'title': 'Classes - Farhan Dance Academy'}
+  const param= {'title': 'Classes - Rhythm & Motion Dance Academy'}
   res.status(200).render('classes.pug', param);
 })
 
 // Gallery page get request
 app.get('/gallery',(req, res)=>{
-  const param= {'title': 'Gallery - Farhan Dance Academy'}
+  const param= {'title': 'Gallery - Rhythm & Motion Dance Academy'}
   res.status(200).render('gallery.pug', param);
 })
 
 // Contact page get request
 app.get('/contact',(req, res)=>{
-  const param= {'title': 'Contact - Farhan Dance Academy'}
+  const param= {'title': 'Contact - Rhythm & Motion Dance Academy'}
   res.status(200).render('contact.pug', param);
 })
 // Contact post request and saving data from contact to the collection

@@ -92,6 +92,8 @@ body::before {
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 20px var(--primary-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 3px;
 }
 
 #navbar .nav-links {
